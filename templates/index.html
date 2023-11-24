@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <title>Market Dashboard</title>
+</head>
+<body>
+
+  <h1>Market Performance</h1>
+  
+  {% for table in tables %}
+    <h2>{{titles}}</h2>
+    {{ table|safe }}
+  {% endfor %}
+
+</body>
+</html>
